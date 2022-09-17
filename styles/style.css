@@ -1,0 +1,52 @@
+:root{
+    --base: rgb(42, 82, 151);
+    --bg: rgb(85, 126, 158);
+    --spacing: 10px;
+    --blur: 10px;
+}
+html{
+    background-color: var(--bg);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    max-width: 70vw;
+    max-height: 50vw;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    justify-content: center;
+}
+.controls{
+    grid-column: 3/10;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+.controls input{
+    margin: 0 10px;
+    justify-content: center;
+}
+h1{
+    justify-content: center;
+    grid-column: 3/10;
+}
+.img{
+    padding: var(--spacing);
+    background-color: var(--base);
+    filter: blur(var(--blur));
+    margin-top: 20px;
+    border-radius: 8px;
+    grid-column: 4/10;
+    position: relative;
+    
+}
+.img:hover{
+    transform: scale(1.05);
+    z-index: 1;
+    transition: 1s;
+}
+span{
+    color: var(--base);
+}
